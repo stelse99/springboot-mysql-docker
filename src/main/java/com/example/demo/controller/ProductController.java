@@ -29,7 +29,7 @@ public class ProductController {
 		return ResponseEntity.ok(productRepository.findById(id).get());
 	}
 
-	@PostMapping
+	@PostMapping("/products")
 	public ResponseEntity<Product> createProduct(@RequestBody Product product) {
 		return ResponseEntity.ok(productRepository.save(product));
 	}
